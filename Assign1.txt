@@ -1,8 +1,12 @@
+     Assignment -1
+     
 show databases;
 create database product;
 create schema product;
 use product;
 
+A) Create table Salespeople:
+---------------------------------
 Create table SALESPEOPLE (
 Snum int(4),
  Sname varchar(10),
@@ -10,14 +14,18 @@ Snum int(4),
  Comm float(3,2)
 );
 
-
+Insert Data Into salespeople table:
+-------------------------------------
 Insert into salespeople  values(1001,' Peel',' London ',.12);
 Insert into salespeople  values(1002,'Serres','San Jose',.13);
 Insert into salespeople  values(1004,'Motika','London',.11);
  Insert into salespeople  values(1007,'Rifkin','Barcelona',.15);
  Insert into salespeople  values(1003,'Axelord','New York',.10);
  select * from salespeople;
- 
+
+
+B) create table Customer:
+----------------------------------
  Create table CUSTOMERS(
  Cnum int(4),
  Cname varchar(10),
@@ -25,6 +33,9 @@ Insert into salespeople  values(1004,'Motika','London',.11);
  Rating int(4),
  Snum int(4)
 ); 
+
+Insert Data Into customers table:
+--------------------------------------
 Insert into customers values(2001,'Hoffman','London',100,1001);
  Insert into customers values(2002,'Giovanni','Rome',200,1003);
 Insert into customers values(2003,'Liu','San Jose',200,1002);
@@ -34,6 +45,9 @@ Insert into customers values(2008,'Cisneros','San Jose',300,1007);
 Insert into customers values(2007,'Pereira','Rome',100,1004);
 select * from customers;
 
+C) Create table Orders:
+-----------------------------------
+
 Create table ORDERS (
 Onum int(4),
  Amt float(7,2),
@@ -41,6 +55,10 @@ Onum int(4),
  Cnum int(4),
  Snum int(4) 
 );
+
+Insert Data Into Orders table:
+-------------------------------------
+
  insert into orders values(3001,18.69,'1990-10-03',2008,1007);
 insert into orders values(3003,767.19,'1990-10-03',2001,1001);
  insert into orders values(3002,1900.10,'1990-10-03',2007,1004);
