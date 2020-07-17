@@ -1,0 +1,101 @@
+show databases;
+create database exercise1;
+use exercise1;	
+show tables;
+1) create table SEMP:
+
+Create table SEMP
+(
+	EMPNO CHAR(4),
+	 EMPNAME CHAR(20),
+	 BASIC FLOAT(9,2),
+	 DEPTNO CHAR(2),
+	 DEPTHEAD CHAR(4) 
+);
+
+2) create the table SDEPT
+
+Create table SDEPT (
+DEPTNO CHAR(2),
+ DEPTNAME CHAR(15)
+); 
+
+3) Insert values into SDEPT:
+
+insert into sdept values('10','Development');
+insert into sdept values('20','Traning');
+select * from sdept;
+
+4) Insert Values in SEMP:
+
+insert into semp(empno,empname,basic,deptno) values('0001','SUNIL',6000,'10');
+ 
+insert into semp(empno,empname,basic,deptno) values('0002','HIREN',8000,'20');
+
+insert into semp(empno,empname,basic,deptno,depthead) values('0003','ALI',4000,'10','0001');
+
+insert into semp(empno,empname,basic,depthead) values('0004','GEORGE',6000,'0002');
+
+select * from semp;
+
+
+* Create tables S,P,J,SPJ:
+
+ create table S(
+     S char(4),
+     Sname varchar(20),
+     Status varchar(10),
+     City varchar(20)
+    );
+
+ create table P(
+     P char(4),
+     Pname varchar(20),
+     Color varchar(10),
+	Weight float(3,2),
+     City varchar(20)
+    );
+
+create table J(
+          J char(4),
+          Jname varchar(20),
+             City varchar(20)
+         );
+
+	create table SPJ(
+		S char(4),
+		P char(4),
+		j char(4),
+		Qty int(4)
+	);
+
+insert into s values('S1','KING',20,'Paris');
+insert into s values('S2','Adams',10,'London');
+insert into s values('S3','SMITH',15,'Anthens');
+
+insert into p values('P1','Breacks','Black',2.00,'London');
+insert into p values('P2','Door','RED',5.25,'Paris');
+insert into p values('P3','Tier','WHITE',9.02,'New York');
+
+insert into j values
+('J1','Sam','Yordland'),
+('J2','Jimmy','Scotloand'),
+('J3','Shairgil','India');
+
+insert into spj values
+('S1','P1','J1',100),
+('S2','P2','J2',250),
+('S3','P3','J3',300);
+
+5) select * from s;
+6) select s_,sname from s;
+7) select pname,color from p where city='London';
+
+8) select sname from s where City='London';
+9) select * from s where city='paris' or  city='Anthens';
+10)select * from p where city='Anthens';
+11)select pname from p where weight>12 or weight<14;
+12)select sname from s where status>=20;
+13)select sname from s where city!='London';
+14)select city from s;
+15)select weight "G", weight/1000 "MG", weight*1000 "KG" from p;
