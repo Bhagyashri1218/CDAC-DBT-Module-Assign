@@ -33,4 +33,4 @@ select * from p
 
 /*7. Display all the Projects, with the third letter in JNAME as ‘n’. */
     select * from j
-		where jname like '__a';
+		where jname like '__n';
